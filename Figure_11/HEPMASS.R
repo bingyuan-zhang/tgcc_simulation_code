@@ -23,8 +23,7 @@ ari <- mclust::adjustedRandIndex(estlabel, rlabel)
 er <- mclust::classError(estlabel, rlabel)$errorRate
 1 - er; ari
 
-source("./simulation/Figure_11/utils.R")
-res.heat <- parsHeatmap(tgcc.fit, rlabel, show = 500, k = 2)
+res.heat <- tgcc:::parsHeatmap(tgcc.fit, rlabel, show = 500, k = 2)
 datanew <- res.heat$datanew
 dend <- res.heat$dend
 labelnew <- res.heat$rowcolor
